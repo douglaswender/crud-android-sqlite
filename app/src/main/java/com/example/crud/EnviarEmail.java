@@ -18,6 +18,8 @@ import okhttp3.ResponseBody;
 
 public class EnviarEmail {
 
+    //julio.antunes@outlook.com
+
     public final MediaType JSON = MediaType.get("application/json; charset=utf-8");
 
     OkHttpClient client = new OkHttpClient();
@@ -60,7 +62,7 @@ public class EnviarEmail {
                 "    {\n" +
                 "      \"to\": [\n" +
                 "        {\n" +
-                "          \"email\": \"dglswender@gmail.com\"\n" +
+                "          \"email\": \"julio.antunes@outlook.com\"\n" +
                 "        }\n" +
                 "      ],\n" +
                 "      \"subject\": \"Inserção no Banco de Dados!!!\"\n" +

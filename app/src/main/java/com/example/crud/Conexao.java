@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class Conexao extends SQLiteOpenHelper {
 
     private static final String nameDb = "banco.db";
-    private static final int versionDb = 1;
+    private static final int versionDb = 2;
 
     public Conexao(Context context) {
         super(context, nameDb, null, versionDb);
@@ -23,6 +23,7 @@ public class Conexao extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+        db.execSQL("DROP TABLE IF EXISTS pessoa");
+        onCreate(db);
     }
 }
